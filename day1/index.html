@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <p id="hello" class="valid">
-      Hello World!
-    </p>
-    <button id="myButton">
-      Click Me!
-    </button>
-    <script src="script.js"></script>
-  </body>
-</html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Day 1 Demo</title>
+  <meta name="description" content="Day 1 Demo for HTML5 and Firefox OS bootcamp">
+  <meta name="author" content="Victor Neo">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/skeleton.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div id="description" class="sixteen columns offset-by-one">
+      <!-- Description --!>
+      <div class="three columns">
+        <img id="face" src="static/img/face.jpg" />
+      </div>
+      <div class="ten columns">
+        <div class="four columns">
+          <h3>Victor Neo</h3>
+        </div>
+        <div class="four columns">
+          <h4>Computer Science</h4>
+        </div>
+        <div class="ten columns">
+          <h5>Python, Django and English Breakfast Tea. Lead Engineer at <a href="http://carousell.co/" target="_blank">Carousell</a>.</h5>
+        </div>
+      </div>
+
+      <div class="fourteen columns">
+        <textarea id="messages" readonly=readonly></textarea>
+      </div>
+      <div class="fourteen columns">
+        <input type="text" id="message" name="message" placeholder="Type a Message Here" />
+        <button id="submitBtn">Send</button>
+      </div>
+
+    </div>
+  </div><!-- container -->
+
+<script src="static/js/script.js"></script>
+
+</body>
+</html>

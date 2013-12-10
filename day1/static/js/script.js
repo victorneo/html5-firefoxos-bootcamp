@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var hello = document.getElementById("hello");
-  var button = document.getElementById("myButton");
-
-  hello.style.fontSize = "100px";
-
-  var closedOverCounter = 0;
+  var submitBtn = document.getElementById("submitBtn");
+  var messages = document.getElementById("messages");
+  var messageInput = document.getElementById("message");
 
   function whenClicked (event) {
-    console.log("Hey I was clicked " + ++closedOverCounter +
-                " time[s]");
-    hello.classList.toggle("valid");
+    messages.value += messageInput.value + '\n';
+    messageInput.value = '';
   };
 
-  button.addEventListener("click", whenClicked);
+  submitBtn.addEventListener("click", whenClicked);
 });
 
