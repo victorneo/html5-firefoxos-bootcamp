@@ -1,9 +1,7 @@
 function dropImage(evt){
   var img = document.createElement('img');
-  var messages = document.getElementById("messages");
   img.src = evt.target.result;
-  messages.appendChild(img);
-  messages.innerHTML += '<br />';
+  return img;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,12 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
   target.addEventListener('drop', function(evt){
     evt.preventDefault();
     evt.stopPropagation();
-    console.log('dropped');
 
     var file = evt.dataTransfer.files[0];
     var fileReader = new FileReader();
     fileReader.readAsDataURL(file);
-    fileReader.onload = dropImage;
+    fileReader.onload = function(evt){
+      img = dropImage(evt);
+      messages.appendChild(img);
+      messages.innerHTML += '<br />';
+    };
   });
 });
 
