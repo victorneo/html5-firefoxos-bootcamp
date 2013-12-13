@@ -53,26 +53,32 @@ document.addEventListener("DOMContentLoaded", function () {
   // Perform magic when a message is pushed to us
   ws.onmessage = function (message) {
     var msg = JSON.parse(message.data)
+    var notif = {};
 
     // Notifications
-    Notification.requestPermission(function() {
-      new Notification(msg.from, {'body': 'Message: ' + msg.content, 'icon': '/logo.png'});
-    });
 
     if (msg.type === 'text'){
       messages.innerHTML += msg.from + ': ' + msg.content;
+      notif = {'body': msg.content};
     }
     else if (msg.type === 'image'){
       var img = document.createElement('img');
       img.src = msg.content;
       messages.appendChild(img);
+      notif = {'icon': msg.content};
     }
     else if (msg.type === 'text'){
       var href = document.createElement('a');
       img.href = msg.content;
       messages.appendChild(href);
+      notif = {'body': msg.content};
     }
     messages.innerHTML += '<br />';
+
+    Notification.requestPermission(function(){
+      new Notification(msg.from, notif);
+      window.navigator.vibrate(100);
+    });
   };
 });
 
