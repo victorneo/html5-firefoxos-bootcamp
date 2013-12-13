@@ -1,4 +1,4 @@
-demo3
+demo4
 =====
 
-Web sockets
+Firefox OS app + Notifications

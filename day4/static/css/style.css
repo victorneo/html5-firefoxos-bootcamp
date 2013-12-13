@@ -13,11 +13,14 @@ h1, h2, h3, h4, h5{
 
 body {
   margin-top: 25px;
+  margin-bottom: 30px;
   font-family: "FiraSans-Regular", "Arial", sans-serif;
 }
 
 img#face {
   width: 50%;
+  border-radius: 50%;
+  border: 5px solid #ddd;
 }
 
 div#messages {
@@ -47,3 +50,13 @@ div#target-drop {
   border: 1px solid #000;
 }
 
+@media (max-width: 600px) {
+  div{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  div#messages{
+    text-align: left;
+  }
+}
