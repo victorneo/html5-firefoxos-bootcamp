@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url("../fonts/FiraSans/FiraSans-Regular.ttf");
+}
+@font-face {
+  font-family: "FiraSans-Bold";
+  src: url("../fonts/FiraSans/FiraSans-Bold.ttf");
+}
+
+h1, h2, h3, h4, h5{
+  font-family: "FiraSans-Bold", "Arial", sans-serif;
+}
+
+body {
+  margin-top: 25px;
+  font-family: "FiraSans-Regular", "Arial", sans-serif;
+}
+
+img#face {
+  width: 50%;
+}
+
+div#messages {
+  background-color: #eee;
+  margin-top: 20px;
+  padding: 10px;
+  width: 90%;
+  height: 150px;
+  overflow: auto;
+}
+
+div#messages img {
+  width: 5%;
+}
+
+div#messageForm {
+  margin-top: 10px;
+}
+
+input#message {
+  display: inline;
+}
+
+div#target-drop {
+  display: inline;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
